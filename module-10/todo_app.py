@@ -1,3 +1,8 @@
+# Christopher Villarreal
+# Module 10 Assignment 2 - To-Do App
+# December 5, 2025
+# Purpose: Create a To-Do app using Tkinter that allows users to add and remove tasks.
+
 import tkinter as tk
 import tkinter.messagebox as msg
 
