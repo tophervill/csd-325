@@ -53,8 +53,9 @@ class Todo(tk.Tk):
         # Adds file with exit dropdown
         self.menu_bar = tk.Menu(self)
         self.file_menu = tk.Menu(self.menu_bar, tearoff=0)
-        self.file_menu.add_command(label="Exit", command=self.request_close)
         self.menu_bar.add_cascade(label="File", menu=self.file_menu)
+        # self.file_menu.add_separator()
+        self.file_menu.add_command(label="Exit", command=self.destroy)
         self.config(menu=self.menu_bar)
 
     def add_task(self, event=None):
@@ -108,12 +109,6 @@ class Todo(tk.Tk):
                 move = -1
 
             self.tasks_canvas.yview_scroll(move, "units")
-
-    # Function triggers when exit is clicked
-    def request_close(self):
-        if msg.askokcancel("Quit", "Do you want to quit?"):
-            self.destroy()
-
 
 if __name__ == "__main__":
     todo = Todo()
