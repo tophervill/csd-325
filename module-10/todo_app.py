@@ -50,11 +50,10 @@ class Todo(tk.Tk):
 
         self.colour_schemes = [{"bg": "deep sky blue", "fg": "black"}, {"bg": "gold", "fg": "black"}]
 
-        # Adds file with exit dropdown
+        # Adds menu bar with file > exit option
         self.menu_bar = tk.Menu(self)
         self.file_menu = tk.Menu(self.menu_bar, tearoff=0)
         self.menu_bar.add_cascade(label="File", menu=self.file_menu)
-        # self.file_menu.add_separator()
         self.file_menu.add_command(label="Exit", command=self.destroy)
         self.config(menu=self.menu_bar)
 
